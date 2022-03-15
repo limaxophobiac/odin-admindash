@@ -10,7 +10,7 @@ h1 {
 
 #container {
     display: grid;
-    grid-template-columns: minmax(250px, 0.8fr) minmax(330px, 4fr) minmax(275px, 1fr);
+    grid-template-columns: minmax(250px, 1fr) minmax(330px, 4fr) minmax(275px, 1.2fr);
     grid-template-rows: 150px 1fr 1fr;
     min-height: 100vh;
 }
@@ -20,14 +20,40 @@ h1 {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 5fr minmax(300px, 3fr);
     grid-template-rows: 1fr 1fr;
     align-items: center;
-    justify-items: center;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+#hButtons {
+    justify-self: stretch;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: clamp(10px, 8%, 50px);
+}
+
+#hButtons Button {
+    font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(12, 74, 189, 0.89);
+    padding: 10px 20px;
+    min-width: 90px;
+    border-radius: 20px;
 }
 
 #searchbar{
     justify-self: stretch;
+}
+
+#topright {
+    justify-self: center;
 }
 
 #bigName {
@@ -51,6 +77,20 @@ h1 {
     gap: 10px;
 }
 
+#sidebarcontent .textlink {
+    color: white;
+    text-decoration: none;
+}
+
+#sidebarcontent .textlink:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#sidebarcontent .icon:hover + a{
+    text-decoration: underline;
+}
+
 #logo{
     grid-column: 1 / 3;
 }
@@ -58,7 +98,10 @@ h1 {
 .icon {
     width: 30px;
     height: 30px;
-    background-color: rgb(82, 211, 22);
+}
+.icon img{
+    width: 30px;
+    height: 30px;
 }
 
 #projects {
@@ -68,9 +111,13 @@ h1 {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: 40px repeat(auto-fit, minmax(200px, 1fr));
     padding: 10px;
     overflow: auto;
+}
+
+#projectstitle{
+    grid-column: 1 / -1;
 }
 
 #rightbar {
@@ -79,6 +126,8 @@ h1 {
     display: flex;
     flex-direction: column;
     background-color: black;
+    min-height: auto;
+    gap: 10px;
 }
 
 #announcements {
@@ -92,6 +141,6 @@ h1 {
 
 .project {
     background-color: red;
-    min-height: 150px;
-    min-width: 250px;
+    min-height: 200px;
+    min-width: 300px;
 }
