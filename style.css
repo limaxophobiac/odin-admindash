@@ -25,7 +25,7 @@ h1 {
     align-items: center;
     padding: 10px 20px 20px 30px;
     column-gap: 10px;
-    box-shadow: 0px 2px 5px rgb(145, 145, 145);
+    box-shadow: 0px 2px 5px rgb(205, 205, 205);
     position: relative;
     z-index: 2;
 }
@@ -46,7 +46,7 @@ h1 {
     border: none;
     color: white;
     font-weight: bold;
-    background-color: rgba(12, 74, 189, 0.89);
+    background-color: rgba(30, 150, 255, 1.0);
     padding: 10px 20px;
     min-width: 90px;
     border-radius: 20px;
@@ -83,11 +83,11 @@ h1 {
 }
 
 #sidebar {
-    background-color: rgba(12, 74, 189, 0.89);
+    background-color: rgba(30, 150, 255, 1.0);
     grid-column: 1 / 2;
     grid-row: 1 / 4;
     position: relative;
-    box-shadow: 3px 0px 5px rgb(145, 145, 145);
+    box-shadow: 3px 0px 5px rgb(205, 205, 205);
 }
 
 #sidebarcontent {
@@ -132,7 +132,7 @@ h1 {
 }
 
 #projects {
-    background-color: lightgray;
+    background-color: rgb(233, 233, 233);
     grid-column: 2 / 3;
     grid-row: 2 / 4;
     display: grid;
@@ -162,7 +162,7 @@ h1 {
 }
 
 #announcements > h1 {
-    background-color: lightgray;
+    background-color: rgb(233, 233, 233);
     height: 40px;
     padding: 10px 0px 10px 0px;
 }
@@ -180,16 +180,16 @@ h1 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
     border-left: 5px solid orange;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
     position: relative;
-    box-shadow: 2px 2px 4px rgb(145, 145, 145);
+    box-shadow: 2px 2px 4px rgb(205, 205, 205);
     box-sizing: border-box;
 }
 
 .project:hover {
     transform: scale(1.02);
-    box-shadow: 4px 3px 5px rgb(145, 145, 145);
+    box-shadow: 3px 3px 5px rgb(205, 205, 205);
 }
 
 .project h1 {
