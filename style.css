@@ -132,7 +132,7 @@ h1 {
 }
 
 #projects {
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(235, 235, 245);
     grid-column: 2 / 3;
     grid-row: 2 / 4;
     display: grid;
@@ -183,13 +183,13 @@ h1 {
     border-radius: 5px;
     padding: 10px;
     position: relative;
-    box-shadow: 2px 2px 4px rgb(205, 205, 205);
+    box-shadow: 1px 1px 3px rgb(205, 205, 205);
     box-sizing: border-box;
 }
 
 .project:hover {
-    transform: scale(1.02);
-    box-shadow: 3px 3px 5px rgb(205, 205, 205);
+    box-shadow: 5px 6px 5px rgb(205, 205, 205), 1px 0px 5px rgb(205, 205, 205);
+    border-left: 5px solid yellow;
 }
 
 .project h1 {
