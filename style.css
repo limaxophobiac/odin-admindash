@@ -1,3 +1,7 @@
+:root {
+
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -139,7 +143,7 @@ h1 {
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-rows: 40px repeat(auto-fit, minmax(150px, 1fr));
-    padding: 10px 20px 20px 20px;
+    padding: 10px 30px 20px 20px;
 }
 
 #projectstitle{
@@ -151,25 +155,51 @@ h1 {
     grid-row: 2 / 4;
     display: flex;
     flex-direction: column;
-    background-color: black;
-    min-height: auto;
-    gap: 10px;
-}
-
-#announcements {
-    background-color: purple;
-
-}
-
-#announcements > h1 {
     background-color: rgb(233, 233, 233);
+    min-height: auto;
+}
+
+#announcementContainer, #trendingContainer {
+    background-color: rgb(233, 233, 233);
+    padding: 10px 20px 20px 0px;
+
+}
+
+
+#announcementContainer > h1, #trendingContainer >h1 {
     height: 40px;
     padding: 10px 0px 10px 0px;
 }
 
-#trending {
-    background-color: cyan;
+#trendingContaine, #projects {
+    padding-bottom: 40px;
 }
+
+
+#announcements, #trending{
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+    box-shadow: 1px 1px 4px rgb(205, 205, 205);
+    min-height: calc(50vh - 175px);
+}
+
+.announcement {
+
+}
+
+.announcement > h1 {
+    font-size: 1rem;
+}
+
+.announcement > p {
+    font-size: 0.75rem;
+
+}
+
+
 
 .project {
     /*was hopeless without border-box*/
