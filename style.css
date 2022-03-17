@@ -57,7 +57,19 @@ h1 {
 }
 
 #searchbar{
-    justify-self: stretch;
+    justify-self: start;
+    width: 95%;
+    background-color: rgb(240, 240, 240);
+    min-height: 1.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;;
+    padding: 2px 10px 2px 10px;
+    box-sizing: border-box;
+}
+
+#searchbar:focus {
+    outline: 1px solid darkgray;
 }
 
 #topright {
@@ -126,11 +138,11 @@ h1 {
     text-decoration: underline;
 }
 
-.icon {
+#sidebar .icon {
     width: 25px;
     height: 25px;
 }
-.icon img{
+#sidebar .icon img, #topright .icon {
     width: 25px;
     height: 25px;
 }
@@ -157,12 +169,12 @@ h1 {
     grid-row: 2 / 4;
     display: flex;
     flex-direction: column;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(235, 235, 245);
     min-height: auto;
 }
 
 #announcementContainer, #trendingContainer {
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(235, 235, 245);
     padding: 5px 20px 10px 0px;
 
 }
@@ -188,15 +200,9 @@ h1 {
     padding: 20px;
     position: relative;
     box-shadow: 1px 1px 4px rgb(205, 205, 205);
-}
-
-.announcement > h1, .trend > h1 {
-    font-size: 1rem;
-}
-
-.announcement > p, .trend > p {
-    font-size: 0.75rem;
-
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .project {
@@ -213,10 +219,11 @@ h1 {
     position: relative;
     box-shadow: 1px 1px 3px rgb(205, 205, 205);
     box-sizing: border-box;
+    gap: 4px;
 }
 
 .project:hover {
-    box-shadow: 5px 6px 5px rgb(205, 205, 205), 1px 0px 5px rgb(205, 205, 205);
+    box-shadow: 3px 3px 5px rgb(205, 205, 205), 1px 0px 5px rgb(205, 205, 205);
     border-left: 5px solid yellow;
 }
 
@@ -226,7 +233,7 @@ h1 {
 }
 
 .project p {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     max-height: 4.5rem;
     overflow: hidden;
 }
@@ -237,7 +244,31 @@ h1 {
 }
 
 .projectIcons > img {
-    max-height: 30px;
-    max-width: 30px;
-    margin-left: 10px;
+    max-height: 20px;
+    max-width: 20px;
+    margin-left: 15px;
+}
+
+.trend{
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.trend img {
+    grid-area: 1 / 1 / 3 / 2;
+    max-height: 50px;
+    max-width: 50px;
+    border-radius: 100%;
+}
+
+.announcement > h1, .trend > h1 {
+    grid-area: 1 / 2 / 2 /3;
+    font-size: 1rem;
+}
+
+.announcement > p, .trend > p {
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 0.75rem;
+
 }
