@@ -141,13 +141,15 @@ h1 {
     grid-row: 2 / 4;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
     grid-template-rows: 40px repeat(auto-fit, minmax(150px, 1fr));
-    padding: 10px 30px 20px 20px;
+    padding: 0px 20px 30px 20px;
 }
 
 #projectstitle{
     grid-column: 1 / -1;
+    align-self: end;
+    margin-bottom: -10px;
 }
 
 #rightbar {
@@ -161,57 +163,53 @@ h1 {
 
 #announcementContainer, #trendingContainer {
     background-color: rgb(233, 233, 233);
-    padding: 10px 20px 20px 0px;
+    padding: 5px 20px 10px 0px;
 
 }
 
+#projects > h1 {
+    font-size: 1.25rem;
+}
 
 #announcementContainer > h1, #trendingContainer >h1 {
+    font-size: 1.25rem;
     height: 40px;
-    padding: 10px 0px 10px 0px;
+    margin-bottom: -5px;
 }
 
-#trendingContaine, #projects {
-    padding-bottom: 40px;
+#announcementContainer > h1 {
+    padding: 20px 0px 0px 0px;
 }
-
 
 #announcements, #trending{
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     box-sizing: border-box;
     padding: 20px;
     position: relative;
     box-shadow: 1px 1px 4px rgb(205, 205, 205);
-    min-height: calc(50vh - 175px);
 }
 
-.announcement {
-
-}
-
-.announcement > h1 {
+.announcement > h1, .trend > h1 {
     font-size: 1rem;
 }
 
-.announcement > p {
+.announcement > p, .trend > p {
     font-size: 0.75rem;
 
 }
-
-
 
 .project {
     /*was hopeless without border-box*/
     background-color: white;
     min-height: 150px;
-    min-width: 250px;
+    min-width: 275px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
     border-left: 5px solid orange;
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px 20px 15px 20px;
     position: relative;
     box-shadow: 1px 1px 3px rgb(205, 205, 205);
     box-sizing: border-box;
@@ -224,8 +222,22 @@ h1 {
 
 .project h1 {
     align-self: center;
+    font-size: 1.2rem;
+}
+
+.project p {
+    font-size: 0.8rem;
+    max-height: 4.5rem;
+    overflow: hidden;
 }
 
 .project .projectIcons {
     justify-self: end;
+    align-self: end;
+}
+
+.projectIcons > img {
+    max-height: 30px;
+    max-width: 30px;
+    margin-left: 10px;
 }
